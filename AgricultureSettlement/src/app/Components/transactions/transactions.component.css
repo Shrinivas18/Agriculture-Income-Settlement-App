@@ -1,0 +1,293 @@
+body{
+    display: flex;
+    flex-direction:column ;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    color:#2e482e; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+mat-form-field{
+    width:300px !important;
+  }
+  
+
+.containerT {
+    /* height: 300px; */
+    overflow-y: auto;
+    width: fit-content;
+}
+.bt{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 44%;
+  }
+
+.dropdown{
+    margin-left: 3px;
+    height: 35px;
+}
+
+.reports{
+    margin-left: 78.6%;
+    margin-top: 1%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+th{
+    padding: 30px;
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+
+option{
+    font-size: 15px;
+    padding: 2px;
+}
+
+select{
+    font-size: 15px;
+}
+
+form{
+    margin-left: 25%;
+    width: 50%;
+    padding: 2px 2px 2px;
+}
+
+
+table{
+    font-size: 15px;
+    align-items: center;
+    display: block;
+    justify-content: center;
+    border:1px double gray;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2px 2px 2px;
+    overflow-x:auto;
+}
+
+h1+hr{
+    margin: 0%;
+}
+
+@media screen and (max-width: 1023px) {
+    table {
+      border: 0;
+      left: 0;
+      justify-content: left;
+      vertical-align:auto;
+      margin-left: 0%;
+      
+    }
+    th{
+        font-size: 16px;
+        margin-left: 4px;
+        padding: 6px;
+    }
+    td{
+        font-size: 14px;
+        margin-left: 4px;
+        padding: 6px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:0 auto;
+        width: 50%;
+        padding: 2px 2px 2px;
+    }
+    option{
+        font-size: 15px;
+    }
+    
+  }
+@media screen and (max-width: 768px) {
+    table {
+      border: 0;
+      left: 0;
+      justify-content: left;
+      vertical-align:auto;
+      margin-left: 0%;
+      
+    }
+    th{
+        font-size: 14px;
+        margin-left: 2px;
+        padding: 5px;
+    }
+    td{
+        font-size: 13px;
+        margin-left: 2px;
+        padding: 5px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:0 auto;
+        width: 50%;
+        padding: 2px 2px 2px;
+    }
+    option{
+        font-size: 13px;
+    }
+    
+  }
+
+  @media screen and (max-width: 684px) {
+    table {
+      /* border: 0; */
+      left: -15%;
+      justify-content: left;
+      vertical-align:auto;
+      margin-left: -0%;
+      overflow-x: auto;
+      
+    }
+    th{
+        font-size: 12px;
+        margin-left: 2px;
+        padding:1px;
+    }
+    td{
+        font-size: 11px;
+        margin-left: 2px;
+        padding: 1px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:0 auto;
+        width: 50%;
+        padding: 2px 2px 2px;
+    }
+    option{
+        font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 667px) {
+    table {
+      border: 0;
+      left: 0;
+      justify-content: left;
+      vertical-align:auto;
+      margin-left: 0%;
+      overflow-x: auto;
+    }
+    th{
+        font-size: 12px;
+        margin-left: 5px;
+        padding:5px;
+    }
+    td{
+        font-size: 11px;
+        margin-left: 5px;
+        padding: 5px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:0 auto;
+        width: 50%;
+        padding: 2px 2px 2px;
+    }
+    option{
+        font-size: 10px;
+        
+    }
+    
+  }
+
+  @media screen and (max-width: 960px) {
+    table {
+      border: 0;
+      left: 0;
+      justify-content: left;
+      vertical-align:auto;
+      margin-left: 0%;
+      overflow-x: auto;
+
+    }
+    th{
+        font-size: 18px;
+        margin-left: 5px;
+        padding: 8px;
+    }
+    td{
+        font-size: 16px;
+        margin-left: 5px;
+        padding: 8px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        margin:0 auto;
+        width: 50%;
+        padding: 2px 2px 2px;
+    }
+    option{
+        font-size: 12px;
+        
+    }
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container-fluid {
+        width: 520px;
+    }
+    .container {
+        width: 500px;
+    }
+    table {
+        border: 0;
+        left: 0;
+        justify-content: left;
+        vertical-align:auto;
+        margin-left: 0%;
+        overflow-x: auto;
+  
+      }
+      th{
+          font-size: 13px;
+          margin-left: 5px;
+          padding: 8px;
+      }
+      td{
+          font-size: 11px;
+          margin-left: 5px;
+          padding: 8px;
+      }
+      h1{
+          text-align: center;
+      }
+      form{
+        margin:0 auto;
+        width: 50%;
+        padding: 2px 2px 2px;
+    }
+    option{
+        font-size: 10px;
+        margin-top: -1%;
+    }   
+    
+  }
+  

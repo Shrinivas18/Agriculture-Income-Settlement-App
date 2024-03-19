@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+}
+.navbar {
+    background:#2e482e;
+    font-size: 16px;
+    padding:  15px 10px ;
+    color: white;
+    text-decoration: none;  
+    /* font-weight: bold; */
+}
+.nav-link,
+.navbar-brand {
+    color:white;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    font-size: 17px;
+}
+
+/* for tablet */
+@media only screen and (max-width: 768px) { 
+    #nav {
+        width: 710px;
+    }
+}
+/* for laptop/pc  */
+@media only screen and (max-width: 992px) {
+    #nav {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #nav {
+        width: 550px;
+    }
+}
+

@@ -1,0 +1,7 @@
+
+@media only screen and (max-width: 600px) {
+    #exportData {
+        width: 550px;
+        left:0
+    }
+}

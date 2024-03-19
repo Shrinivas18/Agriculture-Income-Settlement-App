@@ -1,0 +1,110 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    color:#2e482e; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+button{
+    color: white;   
+    height: 57px;
+}
+
+.head{
+    height: 50px;
+}
+mat-input{
+    margin-top: 10px;
+}
+
+table{
+    font-size: 15px;
+    align-items: center;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    border:1px double gray;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2px 2px 2px;
+}
+th{
+    padding: 30px;
+}
+td{
+    text-align: center;
+    
+}
+
+.head{
+    display: flex;
+}
+
+mat-form-field{
+    margin-top: 20px;
+    margin-left: 88px;
+    width: 298px;
+}
+
+form{
+    margin-left: 40px;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: white;
+}
+
+ /* for tablet */
+ @media only screen and (max-width: 768px) { 
+    .container {
+        width: 710px;
+    }
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        background-color: white;
+    }
+}
+/* for laptop/pc  */
+@media only screen and (max-width: 992px) {
+    .container {
+        width:960px;
+    }
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        background-color: white;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 525px;
+        
+    }
+    
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        background-color: white;
+    }
+    
+}

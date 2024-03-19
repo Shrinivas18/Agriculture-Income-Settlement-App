@@ -1,0 +1,74 @@
+<app-nav-bar></app-nav-bar>
+<div>
+    <h1 style="text-align: center;" >EXPENSE HEAD</h1>
+</div>
+
+<hr>
+<div>
+<div class="container">
+    <div class="container">
+        <form #incomeForm="ngForm" (ngSubmit)="onSubmit(); resetForm(incomeForm)" class="row">
+            <div class="col-md-4">
+                <mat-form-field>
+                    <mat-label>Income Type</mat-label>
+                    <input matInput placeholder="Enter Expense" type="text" name="incomeHead" [(ngModel)]="eData.expense" required pattern="[a-zA-Z ]+"
+                        #expense="ngModel" />
+                    <mat-error *ngIf="expense.touched && expense.invalid">Enter Valid Source</mat-error>
+                    <mat-error *ngIf="expense.errors?.['pattern']">Only alphabets and spaces are allowed</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <textarea matInput placeholder="Description Here..." name="desp" [(ngModel)]="eData.description" required pattern="[a-zA-Z0-9., ]+"
+                        #desp="ngModel" style="height: 23px;"></textarea>
+                    <mat-error *ngIf="desp.touched && desp.invalid && desp.errors?.['pattern']">Valid description required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <button (click)="clicked=true" type="submit" mat-flat-button color="primary" [disabled]="incomeForm.invalid">
+                    {{ clickedUpdate ? 'Update' : 'Submit' }}
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="container">
+            <table mat-table [dataSource]="dataSource" class="table table-striped table-hover">
+                <ng-container matColumnDef="expense">
+                    <th mat-header-cell *matHeaderCellDef> EXPENSE </th>
+                    <td mat-cell *matCellDef="let element" [matTooltip]="element.expense"
+                        style="max-width: 50px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> {{element.expense}}
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> DESCRIPTION </th>
+                    <td mat-cell *matCellDef="let element" [matTooltip]="element.description"
+                        style="max-width: 50px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> {{element.description}}
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> ACTIONS </th>
+                    <td mat-cell *matCellDef="let element">
+                        <mat-icon type="submit" (click)="patchData(element.id);clickedUpdate=true;"
+                            style="color: black;" matTooltip='Edit'>edit</mat-icon>
+                        <mat-icon type="submit" (click)="onDelete(element.id)" style="color:black;margin-left: 10px;" matTooltip='Delete'>
+                            delete_forever</mat-icon>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #2e482e;"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+    </div>
+    
+</div>
+</div>
+
+<app-footer></app-footer>
+  

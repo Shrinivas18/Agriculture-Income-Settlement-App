@@ -1,0 +1,277 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top:100px ;
+    font-family:'Times New Roman', Times, serif;
+    color:#2e482e; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+form{
+  width: 50%;
+}
+
+
+mat-form-field{
+  width:300px !important;
+}
+
+.bt{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 44%;
+}
+
+th{
+  color:white;
+  background-color: #2e482e;
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif
+}
+
+table{
+  font-size: 15px;
+  align-items: center;
+  display: block;
+  justify-content: center;
+  border:1px double gray;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2px 2px 2px;
+} 
+
+
+th{
+    padding: 30px;
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+.my-actions {
+    margin: 2em 2em 0;
+  }
+  
+.order-1 {
+    order: 1; 
+}  
+.order-2 {
+    order: 2;
+}
+
+.containerT{
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1023px) {
+  table {
+    border: 0;
+    left: 0;
+    justify-content: left;
+    vertical-align:auto;
+    margin-left: 0%;
+    
+  }
+  th{
+      font-size: 16px;
+      margin-left: 4px;
+      padding: 6px;
+  }
+  td{
+      font-size: 14px;
+      margin-left: 4px;
+      padding: 6px;
+  }
+  h1{
+      text-align: center;
+  }
+  form{
+      margin:0 auto;
+      width: 50%;
+      padding: 2px 2px 2px;
+  }
+  option{
+      font-size: 15px;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  table {
+    border: 0;
+    left: 0;
+    justify-content: left;
+    vertical-align:auto;
+    margin-left: 0%;
+    
+  }
+  th{
+      font-size: 14px;
+      margin-left: 2px;
+      padding: 5px;
+  }
+  td{
+      font-size: 13px;
+      margin-left: 2px;
+      padding: 5px;
+  }
+  h1{
+      text-align: center;
+  }
+  form{
+      margin:0 auto;
+      width: 50%;
+      padding: 2px 2px 2px;
+  }
+  option{
+      font-size: 13px;
+  }
+  
+}
+
+@media screen and (max-width: 684px) {
+  table {
+    /* border: 0; */
+    left: -15%;
+    justify-content: left;
+    vertical-align:auto;
+    margin-left: -0%;
+    overflow-x: auto;
+    
+  }
+  th{
+      font-size: 12px;
+      margin-left: 2px;
+      padding:1px;
+  }
+  td{
+      font-size: 11px;
+      margin-left: 2px;
+      padding: 1px;
+  }
+  h1{
+      text-align: center;
+  }
+  form{
+      margin:0 auto;
+      width: 50%;
+      padding: 2px 2px 2px;
+  }
+  option{
+      font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  table {
+    border: 0;
+    left: 0;
+    justify-content: left;
+    vertical-align:auto;
+    margin-left: 0%;
+    overflow-x: auto;
+  }
+  th{
+      font-size: 12px;
+      margin-left: 5px;
+      padding:5px;
+  }
+  td{
+      font-size: 11px;
+      margin-left: 5px;
+      padding: 5px;
+  }
+  h1{
+      text-align: center;
+  }
+  form{
+      margin:0 auto;
+      width: 50%;
+      padding: 2px 2px 2px;
+  }
+  option{
+      font-size: 10px;
+      
+  }
+  
+}
+
+@media screen and (max-width: 960px) {
+  table {
+    border: 0;
+    left: 0;
+    justify-content: left;
+    vertical-align:auto;
+    margin-left: 0%;
+    overflow-x: auto;
+
+  }
+  th{
+      font-size: 18px;
+      margin-left: 5px;
+      padding: 8px;
+  }
+  td{
+      font-size: 16px;
+      margin-left: 5px;
+      padding: 8px;
+  }
+  h1{
+      text-align: center;
+  }
+  form{
+      margin:0 auto;
+      width: 50%;
+      padding: 2px 2px 2px;
+  }
+  option{
+      font-size: 12px;
+      
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .container-fluid {
+      width: 540px;
+  }
+  .container {
+      width: 540px;
+  }
+  table {
+      border: 0;
+      left: 0;
+      justify-content: left;
+      vertical-align:auto;
+      margin-left: 0%;
+      overflow-x: auto;
+
+    }
+    th{
+        font-size: 15px;
+        margin-left: 5px;
+        padding: 8px;
+    }
+    td{
+        font-size: 14px;
+        margin-left: 5px;
+        padding: 8px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+      margin:0 auto;
+      width: 50%;
+      padding: 2px 2px 2px;
+  }
+  option{
+      font-size: 10px;
+      margin-top: -1%;
+  }   
+  
+}

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@syncfusion/ej2-ng-charts": "^16.2.50",
+    "chart.js": "^4.4.2",
+    "ng2-charts": "^6.0.0"
+  }
+}
