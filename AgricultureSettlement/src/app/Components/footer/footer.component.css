@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     height:fit-content;
-    position: sticky;
+    position: fixed;
   }
 
   .footer-container {
