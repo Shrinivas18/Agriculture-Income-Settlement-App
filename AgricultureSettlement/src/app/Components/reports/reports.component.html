@@ -1,15 +1,15 @@
 <app-nav-bar></app-nav-bar>
-<button mat-flat-button  (click)="exportAsPDF()" style="cursor: pointer;color:white;background-color: #2e482e;margin-left: 93%;margin-top: 1%;">Export</button>
-
+<button mat-flat-button  (click)="exportAsPDF()" style="background-color: #2e482e;color: white;">Export</button>
+<div style="margin-bottom: 10%;">
 <hr>
-<div id="exportData">
+<div id="exportData" style="overflow-y: auto">
     <div>
         <h1>INCOME REPORT</h1>
     </div>
   <hr>
   
    <div>
-  <div class="container" style="width: 60%;height: 60%;margin-top: 5%;">
+  <div class="container">
       
       <br>
       <h2 ><mat-icon>bar_chart</mat-icon><b>The Bar Plot</b></h2>
@@ -18,7 +18,7 @@
   </div>
   
   
-  <div class="container" style="width: 60%;height: 60%;" >
+  <div class="container"  >
       
       <br>
       <h2 ><mat-icon>pie_chart</mat-icon><b> The Pie Chart</b></h2>
@@ -34,20 +34,21 @@
     </div>
     <hr>
      
-    <div class="container" style="width: 60%;height: 60%;margin-top: 5%;">
+    <div class="container" >
         <br>
         <h2 ><mat-icon>bar_chart</mat-icon><b>The Bar Plot</b></h2>
         <br>
         <canvas id="expenseChart" ></canvas>
     </div>
     
-    <div class="container" style="width: 60%;height: 60%;">
+    <div class="container" >
         <br>
         <h2 ><mat-icon>pie_chart</mat-icon><b>The Pie Chart</b></h2>
         <br>
         <canvas id="expenseChartPie" ></canvas>
     </div>
     <hr>
+</div>
 </div>
 </div>
 <app-footer></app-footer>

@@ -1,7 +1,97 @@
+ 
+.container{
+  width: 60%;
+  height: 60%;
+}
 
-@media only screen and (max-width: 600px) {
+button{
+  cursor: pointer;
+  margin-left: 92%;
+  margin-top: 1%;
+}
+
+@media only screen and (max-width: 700px) {
     #exportData {
-        width: 550px;
-        left:0
+        width: 540px;
+        left:0;
+        margin-bottom: 60%;
+    }
+    .container{
+      width: 100%;
+      height:100%;
+    }
+    button{
+      cursor: pointer;
+      margin-left: 100%;
+      margin-top: 1%;
     }
 }
+
+@media only screen and ((min-width:701)and (max-width: 1000px)) {
+  #exportData {
+    width: 540px;
+    left:0;
+    margin-bottom: 60%;
+}
+.container{
+  width: 100%;
+  height:100%;
+}
+button{
+  cursor: pointer;
+  margin-left: 100%;
+  margin-top: 1%;
+}
+  }
+
+  @media only screen and ((min-width:280)and (max-width: 643px)) {
+    #exportData {
+      width: 540px;
+      left:0;
+      margin-bottom: 60%;
+  }
+  .container{
+    width: 100%;
+    height:100%;
+  }
+  button{
+    cursor: pointer;
+    margin-left: 115%;
+    margin-top: 1%;
+  }
+    }
+/*
+  @media screen and (min-width: 768px) {
+    #exportData {
+        width: 710px;
+        left:0;
+        margin-bottom: 60%;
+    }
+  }
+
+  @media screen and (min-width: 684px) {
+    #exportData {
+        width: 610x;
+        margin-bottom: 60%;
+        left:0;
+    }
+  }
+
+  @media screen and (min-width: 667px) {
+    #exportData {
+        width: 600px;
+        left:0;
+        margin-bottom: 60%;
+    }
+    
+  }
+
+  @media screen and (min-width: 960px) {
+    #exportData {
+        width: 900px;
+
+        margin-bottom: 60%;
+    }
+    
+    
+  } */

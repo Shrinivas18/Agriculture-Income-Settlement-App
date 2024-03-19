@@ -252,7 +252,7 @@ export class ReportsComponent {
       }
     }
     });
- 
+
   }
 
   exportAsPDF(): void {

@@ -60,6 +60,7 @@ select{
 }
 
 form{
+    overflow-y: auto;
     margin-left: 25%;
     width: 50%;
     padding: 2px 2px 2px;
@@ -90,6 +91,7 @@ h1+hr{
       justify-content: left;
       vertical-align:auto;
       margin-left: 0%;
+      margin-bottom: 10%;
       
     }
     th{
@@ -113,6 +115,9 @@ h1+hr{
     option{
         font-size: 15px;
     }
+    #second{
+        margin-bottom: 10%;
+    }
     
   }
 @media screen and (max-width: 768px) {
@@ -122,6 +127,7 @@ h1+hr{
       justify-content: left;
       vertical-align:auto;
       margin-left: 0%;
+      margin-bottom: 10%;
       
     }
     th{
@@ -145,7 +151,9 @@ h1+hr{
     option{
         font-size: 13px;
     }
-    
+    #second{
+        margin-bottom: 35%;
+    }
   }
 
   @media screen and (max-width: 684px) {
@@ -156,6 +164,7 @@ h1+hr{
       vertical-align:auto;
       margin-left: -0%;
       overflow-x: auto;
+      margin-bottom: 10%;
       
     }
     th{
@@ -179,6 +188,9 @@ h1+hr{
     option{
         font-size: 10px;
     }
+    #second{
+        margin-bottom: 40%;
+    }
   }
 
   @media screen and (max-width: 667px) {
@@ -189,6 +201,7 @@ h1+hr{
       vertical-align:auto;
       margin-left: 0%;
       overflow-x: auto;
+      margin-bottom: 10%;
     }
     th{
         font-size: 12px;
@@ -209,8 +222,10 @@ h1+hr{
         padding: 2px 2px 2px;
     }
     option{
-        font-size: 10px;
-        
+        font-size: 10px;   
+    }
+    #second{
+        margin-bottom: 40%;
     }
     
   }
@@ -223,6 +238,7 @@ h1+hr{
       vertical-align:auto;
       margin-left: 0%;
       overflow-x: auto;
+      margin-bottom: 10%;
 
     }
     th{
@@ -244,8 +260,10 @@ h1+hr{
         padding: 2px 2px 2px;
     }
     option{
-        font-size: 12px;
-        
+        font-size: 12px;   
+    }
+    #second{
+        margin-bottom: 35%;
     }
     
   }
@@ -264,6 +282,7 @@ h1+hr{
         vertical-align:auto;
         margin-left: 0%;
         overflow-x: auto;
+        margin-bottom: 10%;
   
       }
       th{
@@ -288,6 +307,8 @@ h1+hr{
         font-size: 10px;
         margin-top: -1%;
     }   
-    
+    #second{
+        margin-bottom: 40%;
+    }
   }
   

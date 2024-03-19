@@ -31,7 +31,6 @@ table{
     margin: 0 auto;
     background-color: white;
     padding: 2px 2px 2px;
-    overflow-x: auto;
 }
 th{
     padding: 30px;
@@ -62,22 +61,128 @@ form{
 }
 
 
-  /* for tablet */
-  @media only screen and (max-width: 768px) { 
+ /* for tablet */
+ @media only screen and (max-width: 768px) { 
     .container {
         width: 710px;
+        margin-bottom: 10%;
     }
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        background-color: white;
+    }
+    .heading{
+        margin-left: 0%;
+        margin-left: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    mat-form-field{
+        margin-top: 20px;
+        margin-left: 0%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }    
+}
+ /* for tablet */
+ @media only screen and (max-width: 768px) { 
+    .container {
+        width: 710px;
+        margin-bottom: 10%;
+    }
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        background-color: white;
+    }
+    .heading{
+        margin-left: 0%;
+        margin-left: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    mat-form-field{
+        margin-top: 20px;
+        margin-left: 0%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }    
 }
 /* for laptop/pc  */
 @media only screen and (max-width: 992px) {
     .container {
-        width:960px;
+        width:960px fit-content;
     }
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        width: 0 auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        /* width: fit-content; */
+        background-color: white;
+    }
+    .heading{
+        
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    mat-form-field{
+        margin-top: 20px;
+        margin-left: 0%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }    
 
 }
 
 @media only screen and (max-width: 600px) {
     .container {
         width: 525px;
+        margin-bottom: 15%;
+        
+    }
+    
+    form{
+        margin:0 auto;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        background-color: white;
+    }
+    .heading{
+        /* margin-left: 35%; */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    mat-form-field{
+        margin-top: 20px;
+        margin-left: 0%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }    
+    mat-paginator{
+        margin-bottom: 40%;
+        margin-top: -10%;
     }
 }
