@@ -25,7 +25,6 @@ table{
     align-items: center;
     display: block;
     justify-content: center;
-    margin: auto;
     border:1px double gray;
     width: fit-content;
     margin: 0 auto;

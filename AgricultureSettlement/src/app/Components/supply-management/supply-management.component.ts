@@ -5,12 +5,10 @@ import Swal from 'sweetalert2';
 import { Audit } from '../../Models/audit';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { ExportAsExcelService } from '../../Services/export-as-excel.service';
+import { ExportAsExcelService } from '../../appService/export-as-excel.service';
 // declare var jsPDF: any;
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable'
-
-
 
 @Component({
   selector: 'app-supply-management',
@@ -46,9 +44,17 @@ export class SupplyManagementComponent implements OnInit{
 
   newTab:boolean=false;
 
+  search:boolean=false;
+
+  input!:string;
+
   toggle()
   { this.ngOnInit();
     this.open=!this.open;
+  }
+
+  toggleSearch(){
+    this.search=!this.search;
   }
   
   ngOnInit(): void {
@@ -83,6 +89,16 @@ export class SupplyManagementComponent implements OnInit{
     
        }  
     }
+
+    applyFilter(event: Event) {
+      const filterValue = (event.target as HTMLInputElement).value;
+      this.dataSource.filter = filterValue.trim().toLowerCase();
+  
+      if (this.dataSource.paginator) {
+        this.dataSource.paginator.firstPage();
+      }
+    }
+  
 
   postAudit(){
     this.supplyService.postAudit(this.audit).subscribe(
@@ -337,7 +353,6 @@ updateInventory(id:number)
     }
     return isAllowed;
   }
-
 
 // ------------------------------------------------------------------------------------------
 @ViewChild('content') content!: ElementRef;

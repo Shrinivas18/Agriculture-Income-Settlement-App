@@ -7,7 +7,6 @@ var pdf = require('html-pdf');
 
 const app = express();
 app.use(cors());
-// hello
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -767,6 +766,47 @@ app.post('/postAudit', (req,res)=>{
         res.json(results);
     });
 });
+
+// --------------------------------------------------------------------------------------------------------------
+
+// GET method
+app.get('/getUsers',(req,res)=>{
+    connection.query('SELECT * FROM users',(error,results)=>{
+        if(error){
+            console.log("Error executing query",error);
+            res.status(500).json({error:'Internal server error'})
+            return
+        }
+        res.json(results);
+    });
+});
+
+
+//  POST method in supply table
+app.post('/addUsers', (req,res)=>{
+    const userData={
+        username:req.body.username,
+        email:req.body.email,
+        password:req.body.password,
+        rpassword:req.body.rpassword,
+        gender:req.body.gender,
+        date:format(req.body.date,'yyyy-MM-dd'),
+        time:req.body.time,
+    }
+    
+    console.log("Recieved User Data:",userData);
+    
+    connection.query('INSERT INTO users SET ?',userData, (err,results)=>{
+        if(err){
+        console.log("Error executing query", err);
+        res.status(500).json({error: 'Internal server error'});
+        return
+        }
+        res.status(200).json({ message: 'Data inserted successfully' });
+    });
+    
+    });
+
 
 
 

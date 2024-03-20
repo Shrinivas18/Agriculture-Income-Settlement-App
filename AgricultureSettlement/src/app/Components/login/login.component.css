@@ -1,0 +1,89 @@
+.loginForm{
+    border:0.3px solid gray;
+    padding: 20px 50px 50px 50px;
+}
+
+#form{
+    margin-top: 10%;
+}
+
+h2{
+    text-align: center;
+}
+
+.home{
+    color: #2e482e;justify-content: left;font-size: 20px;margin-top: 1px;
+  }
+b{
+    color: white;
+} 
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    color:#2e482e; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+mat-form-field{
+    width:300px;
+    height:80px;
+}
+
+button{
+    width: 300px;
+    height:55px;
+    font-size: 20px;   
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+}
+.navbar {
+    background:#2e482e;
+    font-size: 16px;
+    padding:  15px 10px ;
+    color: white;
+    text-decoration: none;  
+    /* font-weight: bold; */
+}
+.nav-link,
+.navbar-brand {
+    color:white;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    font-size: 17px;
+}
+
+/* for tablet */
+@media only screen and (max-width: 768px) { 
+    #nav {
+        width: 710px;
+    }
+}
+/* for laptop/pc  */
+@media only screen and (max-width: 992px) {
+    #nav {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #nav {
+        width: 550px;
+    }
+}
+

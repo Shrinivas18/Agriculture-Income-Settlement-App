@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+    <div class="container-fluid">
+        
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="home">
+                <b>Agriculture Income Expense Management System</b>    
+            </div>
+            <div class="navbar-nav ms-auto">              	
+                <a href="/login" class="nav-item nav-link">Login</a>
+                <a href="/signup" class="nav-item nav-link">Register</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+<div class="container" id="form">
+    <!-- <h1>Agri App </h1> -->
+    <form  #loginForm="ngForm"  (ngSubmit)="onSubmit();loginForm.resetForm()" class="loginForm">
+        <h2>Log in to Agri App </h2>
+        <div class="col-md-4">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput  placeholder="Enter Email" type="email" name="email" [(ngModel)]="log.email" required 
+                                    #income="ngModel" />
+                <mat-error *ngIf="income.touched && income.invalid">Enter Valid Source</mat-error>
+                <mat-error *ngIf="income.errors?.['pattern']">Only alphabets and spaces are allowed</mat-error>
+             </mat-form-field>
+        </div>
+        <div class="col-md-4">
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput  type="password" placeholder="Password" name="pass" [(ngModel)]="log.pass" required pattern="[a-zA-Z0-9., ]+"
+                    #pass="ngModel" />
+                <mat-error *ngIf="pass.touched && pass.invalid && pass.errors?.['pattern']">Valid description required</mat-error>
+            </mat-form-field>
+        </div>
+        
+        <div class="col-md-4">
+            <button [disabled]="!loginForm.valid" type="submit" mat-flat-button color="primary" >
+              Log in  </button>
+        </div>
+    </form>
+</div>

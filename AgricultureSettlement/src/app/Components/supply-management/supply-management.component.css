@@ -12,6 +12,17 @@ form{
   width: 50%;
 }
 
+.searchBar{
+  width:100% !important;  
+  height:76px !important;
+}
+
+.searchbar{
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  
+}
 
 mat-form-field{
   width:300px !important;
@@ -40,11 +51,12 @@ table{
   justify-content: center;
   border:1px double gray;
   width: fit-content;
-  margin: 0 auto;
   background-color: white;
   padding: 2px 2px 2px;
 } 
-
+.searchBar table{
+  
+} 
 
 th{
     padding: 30px;

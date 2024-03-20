@@ -14,8 +14,6 @@ import { TransactionsComponent } from './Components/transactions/transactions.co
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IncomeReportComponent } from './Components/income-report/income-report.component';
-import { ExpenseReportComponent } from './Components/expense-report/expense-report.component';
 import { SupplyManagementComponent } from './Components/supply-management/supply-management.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -23,8 +21,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReportsComponent } from './Components/reports/reports.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ExportComponent } from './Components/export/export.component';
-
-
+import { LoginComponent } from './Components/login/login.component';
+import { CommonModule } from '@angular/common';
+import { SignupComponent } from './Components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +32,13 @@ import { ExportComponent } from './Components/export/export.component';
     IncomeHeadComponent,
     HomeComponent,
     TransactionsComponent,
-    IncomeReportComponent,
-    ExpenseReportComponent,
     SupplyManagementComponent,
     NavBarComponent,
     FooterComponent,
     ReportsComponent,
     ExportComponent,
-    
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +48,9 @@ import { ExportComponent } from './Components/export/export.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    CommonModule,
+    
     
     
 

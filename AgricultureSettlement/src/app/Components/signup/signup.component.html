@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+    <div class="container-fluid">
+        
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="home">
+                <b>Agriculture Income Expense Management System</b>    
+            </div>
+            <div class="navbar-nav ms-auto">              	
+                <a href="/login" class="nav-item nav-link">Login</a>
+                <a href="/signup" class="nav-item nav-link">Register</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+<div class="container" >
+    <!-- <h1>Agri App </h1> -->
+    <form  #signupForm="ngForm"  (ngSubmit)="onSubmit();signupForm.resetForm()" class="signupForm">
+        <h2>Sign up for Agri App </h2>
+        <div class="col-md-6">
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput  placeholder="Enter Username" type="text" name="usermail" [(ngModel)]="user.username" required
+                 #username="ngModel"   />
+                <mat-error *ngIf="username.touched && username.invalid">Enter Valid Source</mat-error>
+             </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput  placeholder="Enter Email" type="email" name="email" [(ngModel)]="user.email" required 
+                    #income="ngModel"  />
+                <mat-error *ngIf="income.touched && income.invalid">Enter Valid Source</mat-error>
+                <mat-error *ngIf="income.errors?.['pattern']">Only alphabets and spaces are allowed</mat-error>
+             </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput  type="password" placeholder="Password" name="pass" [(ngModel)]="user.password" required pattern="[a-zA-Z0-9., ]+"
+                    #pass="ngModel"  />
+                <mat-error *ngIf="pass.touched && pass.invalid && pass.errors?.['pattern']">Valid description required</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field>
+                <mat-label>Re-Enter Password</mat-label>
+                <input matInput  type="password" placeholder="Password" name="rpass" [(ngModel)]="user.rpassword" required pattern="[a-zA-Z0-9., ]+"
+                    #rpass="ngModel"  />
+                <mat-error *ngIf="pass.touched && pass.invalid && pass.errors?.['pattern']">Valid description required</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-1">
+        <mat-label style="font-size: 15px;">Gender:</mat-label>
+        <mat-radio-group aria-label="Select an option" name="gender" [(ngModel)]="user.gender" aria-required="true" required #gender="ngModel" >   
+            <mat-radio-button  value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="others">Others</mat-radio-button>
+          </mat-radio-group>
+        
+        </div>
+
+        <div style="width: 200px;margin-left: 0%;text-align: start;">
+        <section name="t&c" style="margin-left: 0;" required>
+            <mat-checkbox>Terms & Conditions</mat-checkbox>
+        </section>  
+        </div>
+          <p>{{signupForm.valid}}</p>
+        <div class="col-md-6">
+            <button [disabled]="!signupForm.valid" type="submit" mat-flat-button color="primary" >
+              Log in  </button>
+        </div>
+    </form>
+</div>

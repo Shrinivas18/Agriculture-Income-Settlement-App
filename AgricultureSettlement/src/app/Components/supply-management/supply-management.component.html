@@ -67,11 +67,20 @@
         <button [disabled]="!inventoryForm.valid" mat-flat-button color="primary" class="bt">
             {{ ClickedUpdate ? 'Update' : 'Submit' }}
         </button>`
-                
+        <hr>        
     </form>
                 
     <div class="container">
         <div class="container">
+         <div class="searchbar">
+        <mat-icon (click)="toggleSearch()" matTooltip="Search">search</mat-icon>
+        <mat-form-field *ngIf="search" class="searchBar" style="margin-bottom: -2%;margin-top: 1%;">
+            
+            <mat-label>Search</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Fertilizer Sprayers" #input>
+            <!-- <button matSuffix mat-button "><mat-icon>clear</mat-icon></button> -->
+        </mat-form-field>
+       </div>
 
         <table mat-table [dataSource]="dataSource" class="table table-striped table-hover">
 
@@ -116,6 +125,11 @@
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #2e482e;color:white"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the Search </td>
+                <!-- "{{input.value}}" -->
+            </tr>
         </table>
         </div>
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
